@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  height: 60px;
+  background-color: rgb(27, 27, 27);
+}
+
+.imgclass {
+  width: 70px;
+  padding-bottom: 13px;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+header .imgclass a .logo {
+  width: 80%;
+  height: 100%;
+}
+
+.headertitle {
+  font-size: 25px;
+  padding-top: 15px;
+  padding-left: -4px;
+  color: rgb(223, 39, 6);
+  font-weight: 700;
+}
+
+.cover {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(images/anifit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 90vh;
+  margin-top: 0;
+}
+
+.app {
+  width: 550px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+
+section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.create-todo .create {
+  margin-bottom: 10px;
+  color: rgb(2, 128, 2);
+  font-weight: 700;
+}
+
+.create-todo input[type="text"] {
+  display: block;
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 0.7rem 1.5rem;
+  background-color: rgb(222, 223, 224);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.create-todo .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.create-todo .options .squat {
+  width: 90px;
+}
+
+.create-todo .options .squatcardio {
+  width: 70px;
+}
+
+.create-todo .options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  background-color: aliceblue;
+  border-radius: 0.5rem;
+}
+
+.create-todo .options .squatlabel {
+  background-color: rgb(53, 53, 187);
+}
+
+.create-todo .options .cardiolabel {
+  background-color: rgba(250, 0, 12, 0.966);
+}
+
+.exercise {
+  color: white;
+  font-size: 500;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+
+.pick {
+  color: rgb(228, 3, 14);
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(248, 248, 252);
+  box-shadow: 0px 0px 4px rgba(18, 108, 199, 0.75);
+}
+
+.bubble.business {
+  border-color: rgb(248, 246, 246);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+}
+
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  background-color: rgb(253, 186, 0);
+  box-shadow: 0px 0px 4px rgba(18, 108, 199, 0.75);
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.bubble.business::after {
+  background-color: rgb(2, 218, 247);
+  box-shadow: 0px 0px 4px rgba(7, 166, 187, 0.75);
+}
+
+input:checked ~ .bubble::after {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+}
+
+.create-todo .options label div {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.create-todo input[type="submit"] {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 1rem 1.5rem;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 4px rgba(78, 167, 255, 0.75);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.create-todo input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.todo-list .todo-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.todo-item label {
+  display: block;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.todo-item .add-content {
+  flex: 1 1 0%;
+}
+
+.todo-item .add-content input {
+  font-size: 17px;
+}
+
+.todo-item .actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item .actions button {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.todo-item .actions button:hover {
+  opacity: 0.75;
+}
+
+.todo-item .actions .edit {
+  margin-right: 0.5rem;
+  background-color: rgb(31, 6, 179);
+}
+
+.todo-item .actions .delete {
+  margin-right: 0.5rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.todo-item.done .add-content input {
+  text-decoration: line-through;
+  color: rgb(121, 8, 8);
+}

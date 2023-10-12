@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GymFit List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="todolist.css" />
+  </head>
+  <body>
+    <header>
+      <div class="imgclass">
+        <a href="#"><img src="Images/gym.webp" class="logo" alt="" /></a>
+      </div>
+
+      <h2 class="headertitle">GymFit</h2>
+    </header>
+    <section class="cover">
+      <div class="imgcover"></div>
+      <main class="app">
+        <section class="greeting">
+          <h2 class="title">Your Fitness Planner</h2>
+        </section>
+
+        <section class="create-todo">
+          <h3 class="create">Create Your Fitness Routine</h3>
+          <form id="new-todo-form">
+            <input
+              type="text"
+              name="content"
+              id="content"
+              placeholder="Strength & Cardio"
+            />
+
+            <h4 class="pick">Pick a category</h4>
+
+            <div class="options">
+              <label class="squatlabel">
+                <img src="images/squatexample.png" class="squat" />
+                <input
+                  type="radio"
+                  name="category"
+                  id="category1"
+                  value="business"
+                />
+                <span class="bubble business"></span>
+                <div class="exercise">Squats(Leg Day)</div>
+              </label>
+
+              <label class="cardiolabel">
+                <img src="images/cardio.png" class="squatcardio" />
+                <input
+                  type="radio"
+                  name="category"
+                  id="category2"
+                  value="personal"
+                />
+                <span class="bubble personal"></span>
+                <div class="exercise">Cardio(Full body)</div>
+              </label>
+            </div>
+
+            <input type="submit" value="Add Todo" />
+          </form>
+        </section>
+
+        <section class="todo-list">
+          <h3>Your GymFit List</h3>
+          <div class="list" id="todo-list">
+            <!-- <div class="todo-item done">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble business"></span>
+            </label>
+
+            <div class="todo-content">
+              <input type="text" value="Make a video" readonly />
+            </div>
+
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+
+          <div class="todo-item">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble personal"></span>
+            </label>
+
+            <div class="todo-content">
+              <input type="text" value="Make a video" readonly />
+            </div>
+
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div> -->
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>
