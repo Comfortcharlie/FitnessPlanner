@@ -34,7 +34,7 @@ header .imgclass a .logo {
 .cover {
   display: flex;
   justify-content: space-between;
-  background-image: Images/anifit.png;
+  background-image: url(./Images/anifit.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
